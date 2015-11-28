@@ -1,0 +1,253 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF777E241C06002F00EF5690 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = FF777E231C06002F00EF5690 /* main.c */; };
+		FFF43B601C09A66300629307 /* Metrices.c in Sources */ = {isa = PBXBuildFile; fileRef = FFF43B5E1C09A66300629307 /* Metrices.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF777E1E1C06002F00EF5690 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FF777E201C06002F00EF5690 /* OpenMP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenMP; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF777E231C06002F00EF5690 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		FF777E2C1C06070400EF5690 /* matrix.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix.txt; path = "../../../Library/Developer/Xcode/DerivedData/OpenMP-efwvuolcgtmpovgggoegeervyili/Build/Products/Debug/matrix.txt"; sourceTree = "<group>"; };
+		FFF43B5E1C09A66300629307 /* Metrices.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Metrices.c; sourceTree = "<group>"; };
+		FFF43B5F1C09A66300629307 /* Metrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metrices.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF777E1D1C06002F00EF5690 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF777E171C06002F00EF5690 = {
+			isa = PBXGroup;
+			children = (
+				FF777E221C06002F00EF5690 /* OpenMP */,
+				FF777E211C06002F00EF5690 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF777E211C06002F00EF5690 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF777E201C06002F00EF5690 /* OpenMP */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF777E221C06002F00EF5690 /* OpenMP */ = {
+			isa = PBXGroup;
+			children = (
+				FF777E2C1C06070400EF5690 /* matrix.txt */,
+				FF777E231C06002F00EF5690 /* main.c */,
+				FFF43B5E1C09A66300629307 /* Metrices.c */,
+				FFF43B5F1C09A66300629307 /* Metrices.h */,
+			);
+			path = OpenMP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF777E1F1C06002F00EF5690 /* OpenMP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF777E271C06002F00EF5690 /* Build configuration list for PBXNativeTarget "OpenMP" */;
+			buildPhases = (
+				FF777E1C1C06002F00EF5690 /* Sources */,
+				FF777E1D1C06002F00EF5690 /* Frameworks */,
+				FF777E1E1C06002F00EF5690 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenMP;
+			productName = OpenMP;
+			productReference = FF777E201C06002F00EF5690 /* OpenMP */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF777E181C06002F00EF5690 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = erkekin;
+				TargetAttributes = {
+					FF777E1F1C06002F00EF5690 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = FF777E1B1C06002F00EF5690 /* Build configuration list for PBXProject "OpenMP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FF777E171C06002F00EF5690;
+			productRefGroup = FF777E211C06002F00EF5690 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF777E1F1C06002F00EF5690 /* OpenMP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF777E1C1C06002F00EF5690 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF777E241C06002F00EF5690 /* main.c in Sources */,
+				FFF43B601C09A66300629307 /* Metrices.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FF777E251C06002F00EF5690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FF777E261C06002F00EF5690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FF777E281C06002F00EF5690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF777E291C06002F00EF5690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF777E1B1C06002F00EF5690 /* Build configuration list for PBXProject "OpenMP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF777E251C06002F00EF5690 /* Debug */,
+				FF777E261C06002F00EF5690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF777E271C06002F00EF5690 /* Build configuration list for PBXNativeTarget "OpenMP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF777E281C06002F00EF5690 /* Debug */,
+				FF777E291C06002F00EF5690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF777E181C06002F00EF5690 /* Project object */;
+}
