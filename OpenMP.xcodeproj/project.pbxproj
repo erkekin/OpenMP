@@ -27,6 +27,7 @@
 		FF777E201C06002F00EF5690 /* OpenMP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenMP; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF777E231C06002F00EF5690 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		FFD472AD1C0A1496005DA163 /* matrix.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = matrix.txt; path = "../../../Library/Developer/Xcode/DerivedData/OpenMP-fwldilmgdfkrbhahvcjnmlaxqvzz/Build/Products/Debug/matrix.txt"; sourceTree = "<group>"; };
+		FFD472AE1C0A233B005DA163 /* lena.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = lena.bmp; sourceTree = "<group>"; };
 		FFF43B5E1C09A66300629307 /* Metrices.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Metrices.c; sourceTree = "<group>"; };
 		FFF43B5F1C09A66300629307 /* Metrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metrices.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				FFD472AD1C0A1496005DA163 /* matrix.txt */,
+				FFD472AE1C0A233B005DA163 /* lena.bmp */,
 				FF777E231C06002F00EF5690 /* main.c */,
 				FFF43B5E1C09A66300629307 /* Metrices.c */,
 				FFF43B5F1C09A66300629307 /* Metrices.h */,
@@ -215,14 +217,20 @@
 		FF777E281C06002F00EF5690 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		FF777E291C06002F00EF5690 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

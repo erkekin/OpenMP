@@ -164,9 +164,9 @@ void drawArrows(int(**matrix), int row, int col)
                 //  printf("direction: %d \n",mat[i][j]);
             
         }
-        printf("\n");
+            //        printf("\n");
     }
-    printf("\n");
+        //    printf("\n");
     
     printMatrix(mat, r, c);
     
