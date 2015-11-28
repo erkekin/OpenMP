@@ -108,15 +108,24 @@ int getNeighboorsMatrix(int(**bigmatrix), int row, int col){
             break;
     }
 }
+int**  createMatrix(int row, int col){
+    
+    int i;
+    int **matrix = (int **)malloc( row * sizeof(int *));
+    for (i=0; i< row; i++)
+        matrix[i] = (int *)malloc( col * sizeof(int));
+    return matrix;
+}
+
 int** readMatrix(int* row, int* col){
     FILE *fpin;
-
+    
     /*open input file - file name is hardcoded*/
     fpin = fopen("matrix.txt", "r"); /* open the file for reading */
     if (fpin == NULL)
     {
         fprintf(stdout, "Cannot open input file  - Bye\n");
-      
+        
         return NULL;
     }
     
@@ -127,9 +136,7 @@ int** readMatrix(int* row, int* col){
     *col = RdColumnSize(fpin);
     
     int i, j;
-    int **matrix = (int **)malloc(*row * sizeof(int *));
-    for (i=0; i<*row; i++)
-        matrix[i] = (int *)malloc(*col * sizeof(int));
+    int **matrix = createMatrix(*row, *col);
     
     for (i = 0; i <  *row; i++)
         for (j = 0; j < *col; j++){
@@ -137,25 +144,30 @@ int** readMatrix(int* row, int* col){
             matrix[i][j] = data;
         }
     fclose(fpin);  /* close the file */
-
+    
     return matrix;
 }
+
 void drawArrows(int(**matrix), int row, int col)
 {
     int r = row - 2;
     int c = col -2;
     int i, j;
     
-    for (i = 0; i <  r; i++){
+    int **mat = createMatrix(r, c);
+    
+    for (i = 0; i < r; i++){
         for (j = 0; j < c; j++){
             
-            printf("(%d) için ", matrix[i+1][j+1]);
-            printf("direction: %d \n",getNeighboorsMatrix(matrix, i ,j));
-            
+                // printf("(%d) için ", matrix[i+1][j+1]);
+            mat[i][j] = getNeighboorsMatrix(matrix, i ,j);
+                //  printf("direction: %d \n",mat[i][j]);
             
         }
         printf("\n");
     }
     printf("\n");
+    
+    printMatrix(mat, r, c);
     
 }
