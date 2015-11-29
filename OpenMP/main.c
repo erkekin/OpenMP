@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 
-void rgb(){
+void readBMPFileAndConvertToMatrix(){
     
     int width = 512;
     int height = 512;
@@ -29,7 +29,6 @@ void rgb(){
     for (i=0; i< width; i++)
         matrix[i] = (int *)malloc( height * sizeof(int));
     
-    
     for(i=0;i<width;i++){
         
         for(j=0;j<height;j++){
@@ -41,10 +40,8 @@ void rgb(){
             matrix[i][j] = (image[width*j+i][0]+image[width*j+i][1]+image[width*j+i][2])/3;
         }
         
-        
     }
     
-        // printMatrix(matrix, width, height);
     drawArrows(matrix, width, height);
     fclose(streamIn);
     
@@ -52,12 +49,12 @@ void rgb(){
 
 int main(void)
 {
-    rgb();
-        //    int row=0, col=0;           /* the row and column sizes of A */
-        //    int **matrix = readMatrix(&row, &col);
-        //    printMatrix(matrix, row, col);
-        //
-        //    drawArrows(matrix, row, col);
+        //  readBMPFileAndConvertToMatrix();
+    int row=0, col=0;           /* the row and column sizes of A */
+    int **matrix = readMatrix(&row, &col);
+    printMatrix(matrix, row, col);
+    
+    drawArrows(matrix, row, col);
     
     return (0);
 }

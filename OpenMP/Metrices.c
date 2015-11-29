@@ -36,7 +36,7 @@ void printMatrix(int(**matrix), int row, int col)
     int i, j;
     for (i = 0; i <  row; i++){
         for (j = 0; j < col; j++){
-            printf("%d \t \t", matrix[i][j]);
+            printf("%d \t", matrix[i][j]);
         }
         printf("\n");
     }
@@ -46,6 +46,7 @@ void printMatrix(int(**matrix), int row, int col)
 int getNeighboorsMatrix(int(**bigmatrix), int row, int col){
     
     int r,c;
+    int size = 3;
     int middleNumber;
     struct element minimum;
     minimum.number = bigmatrix[row][col];
@@ -54,9 +55,9 @@ int getNeighboorsMatrix(int(**bigmatrix), int row, int col){
     
     middleNumber = bigmatrix[row+1][col+1];
     
-    for (r = row; r<3+row; r++) {
+    for (r = row; r<size+row; r++) {
         
-        for (c = col; c<3+col; c++) {
+        for (c = col; c<size+col; c++) {
             
             if (minimum.number > bigmatrix[r][c]) {
                 minimum.number = bigmatrix[r][c]; // fin the minimum
@@ -66,7 +67,7 @@ int getNeighboorsMatrix(int(**bigmatrix), int row, int col){
             }
         }
     }
-    switch (3*(minimum.i-row) + (minimum.j-col)) { // the order of the minimum number
+    switch (size*(minimum.i-row) + (minimum.j-col)) { // the order of the minimum number
         case 0:
             
             return 8;
@@ -148,8 +149,59 @@ int** readMatrix(int* row, int* col){
     return matrix;
 }
 
+int getWeightedDirection(int(**directionMatrix), int row, int col){
+    
+    int array[9] = {0,0,0,0,0,0,0,0,0};
+    int r,c;
+    int size = 5;
+
+    for (r = row; r < size + row; r++) {
+        
+        for (c = col; c < size + col; c++) {
+            
+            array[directionMatrix[r][c]]++;
+            
+        }
+        
+    }
+    
+    for (r = 0; r<9; r++) {
+        if (array[r]>12) {
+            
+            return r;
+        }
+    }
+    
+    return 0;
+}
+
+void drawAbsoluteDirections(int(**directionMatrix), int row, int col)
+{
+    int r = row - 4;
+    int c = col - 4;
+    int i, j;
+    
+    int **mat = createMatrix(r, c);
+    
+    for (i = 0; i < r; i++){
+        for (j = 0; j < c; j++){
+            
+                // printf("(%d) için ", matrix[i+1][j+1]);
+            mat[i][j] = getWeightedDirection(directionMatrix, i ,j);
+                //printf("direction: %d \n",mat[i][j]);
+            
+        }
+            //printf("\n");
+    }
+        //printf("\n");
+    
+    printMatrix(mat, r, c);
+    
+}
+
 void drawArrows(int(**matrix), int row, int col)
 {
+    
     int r = row - 2;
     int c = col -2;
     int i, j;
@@ -161,13 +213,11 @@ void drawArrows(int(**matrix), int row, int col)
             
                 // printf("(%d) için ", matrix[i+1][j+1]);
             mat[i][j] = getNeighboorsMatrix(matrix, i ,j);
-                //  printf("direction: %d \n",mat[i][j]);
+                // printf("ağırlık: %d \n",mat[i][j]);
             
         }
-            //        printf("\n");
     }
-        //    printf("\n");
-    
     printMatrix(mat, r, c);
+    drawAbsoluteDirections(mat, r, c);
     
 }
