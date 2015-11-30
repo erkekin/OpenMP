@@ -49,12 +49,12 @@ void readBMPFileAndConvertToMatrix(){
 
 int main(void)
 {
-        //  readBMPFileAndConvertToMatrix();
-    int row=0, col=0;           /* the row and column sizes of A */
-    int **matrix = readMatrix(&row, &col);
-    printMatrix(matrix, row, col);
-    
-    drawArrows(matrix, row, col);
+     readBMPFileAndConvertToMatrix();
+//    int row=0, col=0;           /* the row and column sizes of A */
+//    int **matrix = readMatrix(&row, &col);
+//    printMatrix(matrix, row, col);
+//    
+//    drawArrows(matrix, row, col);
     
     return (0);
 }
